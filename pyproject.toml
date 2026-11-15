@@ -4,13 +4,20 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Rasyid Firmansyah", email = "rasyidfirmansyah56@student.uns.ac.id" }
+    { name = "Rasyid Firmansyah", email = "rasyidfirmansyah56@student.uns.ac.id" },
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.11.2",
+    "joblib>=1.5.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.1",
+    "scikit-learn>=1.8.0",
+    "xgboost>=3.4.1",
+]
 
 [project.scripts]
-xgboost-ce = "xgboost_ce:main"
+train = "xgboost_ce.main:main"
 
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
